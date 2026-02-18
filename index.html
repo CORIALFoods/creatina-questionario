@@ -126,7 +126,7 @@ s.push({id:'aspeto',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Co
 s.push({id:'aroma',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Como avalias o aroma?',type:'choice',opts:[{v:'Agradável',i:'👃',l:'Agradável'},{v:'Neutro',i:'😐',l:'Neutro'},{v:'Desagradável',i:'🤢',l:'Desagradável'}]});
 s.push({id:'sabor',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Como avalias o sabor geral?',sub:'Agora sim, prova!',type:'slider',lo:'Não gostei',hi:'Adorei'});
 s.push({id:'residual',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Sentes algum sabor residual desagradável?',sub:'Por exemplo: amargo, metálico, arenoso...',type:'choice',opts:[{v:'Sim',i:'😬',l:'Sim'},{v:'Ligeiro',i:'🤔',l:'Ligeiro'},{v:'Não',i:'😊',l:'Não'}]});
-if(A.residual==='Sim'||A.residual==='Ligeiro')s.push({id:'residualDesc',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Descreve o sabor residual:',type:'text',ph:'Ex: amargo, metálico, arenoso...'});
+if(A.residual==='Sim'||A.residual==='Ligeiro')s.push({id:'residualDesc',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Que tipo de sabor residual?',sub:'Podes seleccionar várias opções',type:'multi',opts:[{v:'Amargo',i:'😖',l:'Amargo'},{v:'Metálico',i:'🔩',l:'Metálico'},{v:'Arenoso',i:'⏳',l:'Arenoso'},{v:'Químico',i:'🧪',l:'Químico'},{v:'Adstringente',i:'😬',l:'Adstringente'},{v:'Outro',i:'❓',l:'Outro'}]});
 s.push({id:'docura',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Como avalias a doçura?',type:'choice',opts:[{v:'Pouco doce',i:'🍋',l:'Pouco doce'},{v:'Equilibrado',i:'👌',l:'Equilibrado'},{v:'Demasiado doce',i:'🍯',l:'Demasiado doce'}]});
 s.push({id:'textura',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Como avalias a textura?',type:'choice',opts:[{v:'Demasiado dura',i:'🪨',l:'Demasiado dura'},{v:'Ideal',i:'👌',l:'Ideal'},{v:'Demasiado mole',i:'🫠',l:'Demasiado mole'},{v:'Arenosa',i:'⏳',l:'Arenosa'},{v:'Pegajosa',i:'🍯',l:'Pegajosa'}]});
 s.push({id:'mastigar',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'É fácil de mastigar?',type:'slider',lo:'Muito difícil',hi:'Muito fácil'});
@@ -234,7 +234,7 @@ aspeto:A.aspeto||'',
 aroma:A.aroma||'',
 sabor:A.sabor||'',
 residual:A.residual||'',
-residual_desc:A.residualDesc||'',
+residual_desc:(A.residualDesc||[]).join(', '),
 docura:A.docura||'',
 textura:A.textura||'',
 mastigar:A.mastigar||'',
