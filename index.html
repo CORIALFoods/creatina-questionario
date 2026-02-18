@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>CORIAL — Questionário Creatina Balance</title>
+<title>CORIAL — Avaliação Barra Coco & Pepitas de Chocolate Branco</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -11,82 +11,71 @@ html,body{width:100%;min-height:100%;overflow-x:hidden}
 html{font-size:16px;-webkit-text-size-adjust:100%}
 body{font-family:'Bricolage Grotesque',sans-serif;background:#FEF9E3;color:#791812;line-height:1.5;padding:20px;display:flex;justify-content:center;align-items:flex-start}
 :root{--berry:#791812;--eggshell:#FEF9E3;--begonia:#FF7276;--bistre:#342119;--r:12px}
-.quiz-container{max-width:560px;width:100%;margin:0 auto;padding-top:20px;padding-bottom:40px}
-.quiz-content{padding:40px}
-@media(max-width:480px){.quiz-content{padding:24px}}
-.progress-container{margin-bottom:32px}
-.progress-bar{height:6px;background:rgba(121,24,18,.12);border-radius:3px;overflow:hidden}
-.progress-fill{height:100%;background:var(--berry);border-radius:3px;transition:width .4s;width:0}
-.progress-text{font-size:12px;font-weight:600;margin-top:10px;opacity:.6;text-transform:uppercase}
+.qc{max-width:560px;width:100%;margin:0 auto;padding-top:20px;padding-bottom:40px}
+.qw{padding:40px}
+@media(max-width:480px){.qw{padding:24px}}
+.pc{margin-bottom:32px}
+.pb{height:6px;background:rgba(121,24,18,.12);border-radius:3px;overflow:hidden}
+.pf{height:100%;background:var(--berry);border-radius:3px;transition:width .4s;width:0}
+.pt{font-size:12px;font-weight:600;margin-top:10px;opacity:.6;text-transform:uppercase}
 .screen{display:none;animation:fadeIn .4s}
 .screen.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.welcome-icon{font-size:56px;margin-bottom:24px}
-.welcome-title{font-size:28px;font-weight:700;margin-bottom:12px;line-height:1.2}
-.welcome-description{font-size:15px;color:var(--bistre);margin-bottom:12px;line-height:1.6;opacity:.9}
-.welcome-cta{font-size:15px;font-weight:500;margin-bottom:28px}
-.welcome-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.wi{font-size:56px;margin-bottom:24px}
+.wt{font-size:28px;font-weight:700;margin-bottom:12px;line-height:1.2}
+.wd{font-size:15px;color:var(--bistre);margin-bottom:12px;line-height:1.6;opacity:.9;text-align:justify}
+.wc{font-size:15px;font-weight:500;margin-bottom:28px;text-align:justify}
+.wb{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
 .badge{font-size:12px;font-weight:600;text-transform:uppercase;padding:10px 16px;border-radius:25px;background:rgba(121,24,18,.08)}
-.badge.highlight{background:var(--begonia);color:#fff}
-.question-title{font-size:22px;font-weight:600;margin-bottom:24px;line-height:1.3}
-.question-subtitle{font-size:14px;color:var(--bistre);opacity:.7;margin-top:-16px;margin-bottom:24px}
-.choices-container{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
-.choice-option{display:flex;align-items:center;gap:14px;padding:16px 20px;border:2px solid rgba(121,24,18,.15);border-radius:var(--r);cursor:pointer;transition:all .2s;background:#fff}
-.choice-option:hover{border-color:var(--berry)}
-.choice-option.selected{border-color:var(--berry);background:rgba(121,24,18,.06)}
-.choice-icon{font-size:24px;flex-shrink:0}
-.choice-content{flex:1;min-width:0}
-.choice-label{font-size:15px;font-weight:600;margin-bottom:2px}
-.choice-description{font-size:13px;color:var(--bistre);opacity:.7}
-.choice-check{width:24px;height:24px;border:2px solid rgba(121,24,18,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.choice-option.selected .choice-check{background:var(--berry);border-color:var(--berry)}
-.choice-option.selected .choice-check::after{content:'✓';color:#fff;font-weight:700;font-size:14px}
-.choice-option.multiple .choice-check{border-radius:6px}
-.slider-container{margin-bottom:24px}
-.slider-labels{display:flex;justify-content:space-between;margin-bottom:16px}
-.slider-label{font-size:13px;color:var(--bistre);opacity:.7;max-width:45%}
-.slider-label:last-child{text-align:right}
+.badge.hl{background:var(--begonia);color:#fff}
+.qtitle{font-size:22px;font-weight:600;margin-bottom:24px;line-height:1.3}
+.qsub{font-size:14px;color:var(--bistre);opacity:.7;margin-top:-16px;margin-bottom:24px}
+.cc{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.co{display:flex;align-items:center;gap:14px;padding:16px 20px;border:2px solid rgba(121,24,18,.15);border-radius:var(--r);cursor:pointer;transition:all .2s;background:#fff}
+.co:hover{border-color:var(--berry)}
+.co.sel{border-color:var(--berry);background:rgba(121,24,18,.06)}
+.ci{font-size:24px;flex-shrink:0}
+.cl{flex:1;min-width:0}
+.cll{font-size:15px;font-weight:600;margin-bottom:2px}
+.cld{font-size:13px;color:var(--bistre);opacity:.7}
+.ck{width:24px;height:24px;border:2px solid rgba(121,24,18,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.co.sel .ck{background:var(--berry);border-color:var(--berry)}
+.co.sel .ck::after{content:'✓';color:#fff;font-weight:700;font-size:14px}
+.co.multi .ck{border-radius:6px}
+.sc{margin-bottom:24px}
+.sl{display:flex;justify-content:space-between;margin-bottom:16px}
+.sll{font-size:13px;color:var(--bistre);opacity:.7;max-width:45%}
+.sll:last-child{text-align:right}
 input[type=range]{-webkit-appearance:none;width:100%;height:8px;background:rgba(121,24,18,.12);border-radius:4px;cursor:pointer}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:32px;height:32px;background:var(--berry);border-radius:50%;cursor:pointer}
-.slider-scale{display:flex;justify-content:space-between;margin-top:12px}
-.scale-point{font-size:13px;font-weight:600;opacity:.4;cursor:pointer}
-.scale-point.active{opacity:1}
-.emoji-feedback{text-align:center;font-size:40px;margin-top:20px}
-.text-input{width:100%;padding:18px 20px;font-family:'Bricolage Grotesque',sans-serif;font-size:16px;border:2px solid rgba(121,24,18,.2);border-radius:var(--r);background:#fff;margin-bottom:20px;resize:vertical;min-height:100px}
-.text-input:focus{outline:0;border-color:var(--berry)}
+.ss{display:flex;justify-content:space-between;margin-top:12px}
+.sp{font-size:13px;font-weight:600;opacity:.4;cursor:pointer}
+.sp.active{opacity:1}
+.ef{text-align:center;font-size:40px;margin-top:20px}
+.ti{width:100%;padding:18px 20px;font-family:'Bricolage Grotesque',sans-serif;font-size:16px;border:2px solid rgba(121,24,18,.2);border-radius:var(--r);background:#fff;margin-bottom:20px;resize:vertical;min-height:100px}
+.ti:focus{outline:0;border-color:var(--berry)}
 .btn{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:600;padding:18px 32px;border:none;border-radius:var(--r);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;text-decoration:none;transition:all .2s}
-.btn-primary{background:var(--berry);color:var(--eggshell)}
-.btn-primary:hover{background:var(--bistre);transform:translateY(-2px)}
-.btn-primary:disabled{background:rgba(121,24,18,.3);cursor:not-allowed;transform:none}
-.btn-back{background:transparent;color:var(--berry);border:2px solid rgba(121,24,18,.2);flex:0 0 auto;width:auto;padding:18px 24px}
-.btn-back:hover{border-color:var(--berry)}
-.nav-buttons{display:flex;gap:12px;margin-top:32px}
-.nav-buttons .btn-primary{flex:1}
-.skip-link{display:block;text-align:center;margin-top:14px;font-size:13px;color:var(--bistre);opacity:.5;cursor:pointer;text-decoration:underline;background:none;border:none;font-family:inherit}
-.skip-link:hover{opacity:.8}
-.transition-screen{text-align:center;padding:20px 0}
-.transition-icon{font-size:56px;margin-bottom:24px}
-.transition-title{font-size:28px;font-weight:700;margin-bottom:12px;line-height:1.2}
-.transition-subtitle{font-size:15px;color:var(--bistre);opacity:.85;margin-bottom:28px;line-height:1.5}
-.comparison-row{display:flex;gap:12px;margin-bottom:24px}
-.comparison-card{flex:1;background:#fff;border:2px solid rgba(121,24,18,.15);border-radius:var(--r);padding:20px 12px;text-align:center;cursor:pointer;transition:all .2s}
-.comparison-card:hover{border-color:var(--berry);transform:translateY(-2px)}
-.comparison-card.selected{border-color:var(--berry);background:rgba(121,24,18,.06)}
-.comparison-emoji{font-size:36px;margin-bottom:8px}
-.comparison-label{font-size:13px;font-weight:600;line-height:1.3}
-.flavor-card{display:flex;align-items:center;gap:14px;padding:18px 20px;border:2px solid rgba(121,24,18,.15);border-radius:var(--r);cursor:pointer;transition:all .2s;background:#fff;margin-bottom:12px}
-.flavor-card:hover{border-color:var(--berry);transform:translateY(-2px)}
-.flavor-card.selected{border-color:var(--berry);background:rgba(121,24,18,.06)}
-.flavor-icon{font-size:28px;width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:rgba(121,24,18,.06);border-radius:var(--r);flex-shrink:0}
-.info-card{background:#fff;border:2px solid rgba(121,24,18,.1);border-radius:var(--r);padding:24px;margin-bottom:24px}
-.info-card-title{font-size:15px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
-.creatine-box{background:var(--berry);border-radius:var(--r);padding:28px;margin-bottom:24px;color:var(--eggshell);position:relative;overflow:hidden}
-.creatine-box::after{content:'⚡';position:absolute;right:16px;top:14px;font-size:40px;opacity:.15}
-.creatine-box h3{font-size:20px;font-weight:700;margin-bottom:10px;position:relative}
-.creatine-box>p{font-size:14px;line-height:1.6;opacity:.85;position:relative}
-.creatine-list{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:10px;position:relative}
-.creatine-list li{font-size:14px;display:flex;align-items:center;gap:10px}
-.creatine-list li::before{content:'✓';background:rgba(254,249,227,.18);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.bp{background:var(--berry);color:var(--eggshell)}
+.bp:hover{background:var(--bistre);transform:translateY(-2px)}
+.bp:disabled{background:rgba(121,24,18,.3);cursor:not-allowed;transform:none}
+.bb{background:transparent;color:var(--berry);border:2px solid rgba(121,24,18,.2);flex:0 0 auto;width:auto;padding:18px 24px}
+.bb:hover{border-color:var(--berry)}
+.nb{display:flex;gap:12px;margin-top:32px}
+.nb .bp{flex:1}
+.skip{display:block;text-align:center;margin-top:14px;font-size:13px;color:var(--bistre);opacity:.5;cursor:pointer;text-decoration:underline;background:none;border:none;font-family:inherit}
+.skip:hover{opacity:.8}
+.ts{text-align:center;padding:20px 0}
+.tsi{font-size:56px;margin-bottom:24px}
+.tst{font-size:28px;font-weight:700;margin-bottom:12px;line-height:1.2}
+.tss{font-size:15px;color:var(--bistre);opacity:.85;margin-bottom:28px;line-height:1.5}
+.crbox{background:var(--berry);border-radius:var(--r);padding:28px;margin-bottom:24px;color:var(--eggshell);position:relative;overflow:hidden}
+.crbox::after{content:'⚡';position:absolute;right:16px;top:14px;font-size:40px;opacity:.15}
+.crbox h3{font-size:20px;font-weight:700;margin-bottom:10px;position:relative}
+.crbox>p{font-size:14px;line-height:1.6;opacity:.85;position:relative}
+.crlist{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:10px;position:relative}
+.crlist li{font-size:14px;display:flex;align-items:center;gap:10px}
+.crlist li::before{content:'✓';background:rgba(254,249,227,.18);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.ic{background:#fff;border:2px solid rgba(121,24,18,.1);border-radius:var(--r);padding:24px;margin-bottom:24px}
 .nt{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px}
 .nt th{text-align:left;padding:8px 10px;background:var(--berry);color:var(--eggshell);font-weight:600;font-size:11px;letter-spacing:.4px}
 .nt th:first-child{border-radius:8px 0 0 0}
@@ -95,411 +84,172 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:32px;heigh
 .nt td:last-child{text-align:center;font-weight:600}
 .nt .sub td:first-child{padding-left:22px;font-size:12px;color:var(--bistre);opacity:.7}
 .nt tr:last-child td{border-bottom:none}
-.ingredients-box{font-size:12px;color:var(--bistre);opacity:.7;line-height:1.6;padding:10px 12px;background:rgba(121,24,18,.03);border-radius:8px;margin-top:10px}
-.allergen-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.allergen-tag{font-size:11px;background:rgba(121,24,18,.08);padding:4px 10px;border-radius:20px;font-weight:500}
-.tabs{display:flex;gap:8px;margin-bottom:16px}
-.tab-btn{flex:1;padding:12px 8px;border:2px solid rgba(121,24,18,.15);background:#fff;border-radius:var(--r);font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;text-align:center}
-.tab-btn.active{border-color:var(--berry);background:var(--berry);color:var(--eggshell)}
-.science-ref{font-size:11px;color:var(--bistre);opacity:.5;margin-top:6px;font-style:italic}
+.ib{font-size:12px;color:var(--bistre);opacity:.7;line-height:1.6;padding:10px 12px;background:rgba(121,24,18,.03);border-radius:8px;margin-top:10px}
+.ar{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.at{font-size:11px;background:rgba(121,24,18,.08);padding:4px 10px;border-radius:20px;font-weight:500}
+.sr{font-size:11px;color:var(--bistre);opacity:.5;margin-top:8px;font-style:italic}
 .footer{text-align:center;margin-top:32px;padding-top:24px;border-top:1px solid rgba(121,24,18,.1)}
 .footer-logo{font-size:24px;margin-bottom:8px}
 .footer-text{font-size:13px;color:var(--bistre);opacity:.6}
-.gdpr-note{font-size:12px;color:var(--bistre);opacity:.5;margin-top:24px;padding-top:16px;border-top:1px solid rgba(121,24,18,.1);line-height:1.5;text-align:center}
-@media(max-width:480px){
-.welcome-title,.transition-title{font-size:24px}
-.question-title{font-size:20px}
-.nav-buttons{flex-direction:column}
-.btn-back{width:100%;order:2}
-.comparison-row{flex-direction:column}
-}
+.gdpr{font-size:12px;color:var(--bistre);opacity:.5;margin-top:24px;padding-top:16px;border-top:1px solid rgba(121,24,18,.1);line-height:1.5;text-align:center}
+@media(max-width:480px){.wt,.tst{font-size:24px}.qtitle{font-size:20px}.nb{flex-direction:column}.bb{width:100%;order:2}}
 </style>
 </head>
 <body>
-<div class="quiz-container"><div class="quiz-content">
-<div class="progress-container" id="progressContainer" style="display:none">
-<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-<div class="progress-text" id="progressText"></div>
-</div>
-<div id="screenContainer"></div>
+<div class="qc"><div class="qw">
+<div class="pc" id="progC" style="display:none"><div class="pb"><div class="pf" id="progFill"></div></div><div class="pt" id="progText"></div></div>
+<div id="sc"></div>
 <div class="footer"><div class="footer-logo">🌿</div><p class="footer-text">© 2026 CORIAL Foods · corialfoods.com</p></div>
 </div></div>
 <script>
-/* ═══════════════════════════════════════
-   BASIN CONFIG — substitui pelo teu endpoint
-   ═══════════════════════════════════════ */
-var BASIN_URL='https://usebasin.com/f/SEU_ID_AQUI';
-
 var BASIN_URL='https://usebasin.com/f/b8a9a96e59cf';
+var A={},CS=0,basinSent=false;
+var NUTRITION=[['Energia','587 kJ / 140 kcal'],['Lípidos','6,0 g'],['&nbsp;&nbsp;saturados','2,6 g'],['Hidratos de carbono','15 g'],['&nbsp;&nbsp;açúcares','9,1 g'],['Fibra','1,9 g'],['Proteínas','5,3 g'],['Sal','0,01 g'],['Creatina','3,0 g']];
+var INGREDIENTS='Tâmaras, amêndoa, proteína de trigo, aveia, creatina monohidratada, chocolate branco (açúcar, manteiga de cacau, leite inteiro em pó, lactose, leite magro em pó, emulsionante: lecitinas, aroma natural de baunilha) (7%), coco (coco ralado, conservante: metabissulfito de sódio) (3,5%), óleo de coco (3%).';
+var ALLERGENS=['GLÚTEN','LEITE','FRUTOS DE CASCA RIJA','SULFITOS'];
+var TRACES=['AMENDOIM'];
 
-var FLAVORS={
-coco:{id:'coco',name:'Coco & Chocolate Branco',emoji:'🥥',short:'Coco & Choc. Branco',
-ingredients:'Tâmaras, amêndoa, proteína de trigo, aveia, creatina monohidratada, chocolate branco (açúcar, manteiga de cacau, leite inteiro em pó, lactose, leite magro em pó, emulsionante: lecitinas, aroma natural de baunilha) (7%), coco (coco ralado, conservante: metabissulfito de sódio) (3,5%), óleo de coco (3%).',
-allergens:['Glúten','Leite','Frutos de casca rija','Sulfitos'],traces:['Amendoim'],
-nutrition:[['Energia','1678 kJ / 401 kcal'],['Lípidos','17 g'],['&nbsp;&nbsp;saturados','7,3 g'],['Hidratos de carbono','44 g'],['&nbsp;&nbsp;açúcares','26 g'],['Fibra','5,5 g'],['Proteínas','15 g'],['Sal','0,02 g']]},
-frutos:{id:'frutos',name:'Frutos Vermelhos & Chocolate Negro',emoji:'🍫',short:'Frutos Verm. & Choc. Negro',
-ingredients:'Tâmaras, amêndoa, proteína de trigo, aveia, creatina monohidratada, chocolate negro (7%) [Pasta de cacau, edulcorante (maltitol), cacau magro em pó, emulsionante (lecitina de soja), aroma natural de baunilha], aromas naturais de framboesa e cereja (0,6%).',
-allergens:['Glúten','Soja','Frutos de casca rija'],traces:['Amendoim','Leite'],
-nutrition:[['Energia','1561 kJ / 373 kcal'],['Lípidos','13 g'],['&nbsp;&nbsp;saturados','2,4 g'],['Hidratos de carbono','45 g'],['&nbsp;&nbsp;açúcares','23 g'],['&nbsp;&nbsp;polióis','3,2 g'],['Fibra','5,4 g'],['Proteínas','17 g'],['Sal','0,01 g']]}
-};
-
-var answers={};
-var firstFlavor=null;
-var currentStep=0;
-var infoTab='coco';
-
-function sf(){return firstFlavor==='coco'?'frutos':'coco';}
-
-function tasteSteps(fid,num){
-var f=FLAVORS[fid];
-var b='Prova '+num+'/2 — '+f.emoji+' '+f.short;
-var steps=[
-{id:fid+'_aspeto',badge:b,title:'Como avalias o aspeto visual da barra?',sub:num===1?'Prova a barra com calma. Começa por observá-la.':'Agora a segunda barra. Bebe um golo de água antes.',type:'slider',lo:'Nada apelativo',hi:'Muito apelativo'},
-{id:fid+'_aroma',badge:b,title:'Como avalias o aroma?',type:'choice',opts:[{v:'Agradável',icon:'👃',label:'Agradável'},{v:'Neutro',icon:'😐',label:'Neutro'},{v:'Desagradável',icon:'🤢',label:'Desagradável'}]},
-{id:fid+'_sabor',badge:b,title:'Como avalias o sabor geral?',sub:'Agora sim, prova!',type:'slider',lo:'Não gostei',hi:'Adorei'},
-{id:fid+'_residual',badge:b,title:'Sentes algum sabor residual desagradável?',sub:'Por exemplo: amargo, metálico, arenoso...',type:'choice',opts:[{v:'Sim',icon:'😬',label:'Sim'},{v:'Ligeiro',icon:'🤔',label:'Ligeiro'},{v:'Não',icon:'😊',label:'Não'}]},
-];
-if(answers[fid+'_residual']==='Sim'||answers[fid+'_residual']==='Ligeiro'){
-steps.push({id:fid+'_residualDesc',badge:b,title:'Descreve o sabor residual:',type:'text',ph:'Ex: amargo, metálico, arenoso...'});
-}
-steps=steps.concat([
-{id:fid+'_docura',badge:b,title:'Como avalias a doçura?',type:'choice',opts:[{v:'Pouco doce',icon:'🍋',label:'Pouco doce'},{v:'Equilibrado',icon:'👌',label:'Equilibrado'},{v:'Demasiado doce',icon:'🍯',label:'Demasiado doce'}]},
-{id:fid+'_textura',badge:b,title:'Como avalias a textura?',type:'choice',opts:[{v:'Demasiado dura',icon:'🪨',label:'Demasiado dura'},{v:'Ideal',icon:'👌',label:'Ideal'},{v:'Demasiado mole',icon:'🫠',label:'Demasiado mole'},{v:'Arenosa',icon:'⏳',label:'Arenosa'},{v:'Pegajosa',icon:'🍯',label:'Pegajosa'}]},
-{id:fid+'_mastigar',badge:b,title:'É fácil de mastigar?',type:'slider',lo:'Muito difícil',hi:'Muito fácil'},
-{id:fid+'_compraria',badge:b,title:'Comprarias esta barra?',type:'choice',opts:[{v:'Sim, com certeza',icon:'🤩',label:'Sim, com certeza'},{v:'Provavelmente sim',icon:'🙂',label:'Provavelmente sim'},{v:'Talvez',icon:'🤔',label:'Talvez'},{v:'Provavelmente não',icon:'😕',label:'Provavelmente não'},{v:'Não',icon:'❌',label:'Não'}]},
-{id:fid+'_sugestoes',badge:b,title:'Sugestões de melhoria para esta barra?',sub:'Opcional — diz-nos o que mudarias.',type:'text',ph:'O que mudarias?',opt:true},
-]);
-return steps;
-}
-
-function buildSteps(){
+function bS(){
 var s=[];
-s.push({id:'_welcome',type:'welcome'});
-s.push({id:'exercicio',badge:'Sobre ti',title:'Praticas exercício físico regularmente?',type:'choice',opts:[{v:'Sim',icon:'✅',label:'Sim'},{v:'Não',icon:'❌',label:'Não'}]});
-if(answers.exercicio==='Sim'){
-s.push({id:'tipoExercicio',badge:'Sobre ti',title:'Que tipo de exercício?',sub:'Podes seleccionar várias opções',type:'multi',opts:[{v:'Ginásio',icon:'🏋️',label:'Ginásio / Musculação'},{v:'Corrida / Cardio',icon:'🏃',label:'Corrida / Cardio'},{v:'Desporto coletivo',icon:'⚽',label:'Desporto coletivo'},{v:'Outro',icon:'🤸',label:'Outro'}]});
-}
-s.push({id:'suplementos',badge:'Sobre ti',title:'Consomes suplementos alimentares?',type:'choice',opts:[{v:'Sim, regularmente',icon:'✅',label:'Sim, regularmente'},{v:'Ocasionalmente',icon:'🔄',label:'Ocasionalmente'},{v:'Não',icon:'❌',label:'Não'}]});
-s.push({id:'creatina',badge:'Sobre ti',title:'Tomas ou já tomaste creatina?',type:'choice',opts:[{v:'Tomo atualmente',icon:'💪',label:'Tomo atualmente'},{v:'Já tomei',icon:'🔄',label:'Já tomei'},{v:'Nunca tomei',icon:'🤷',label:'Nunca tomei'}]});
-s.push({id:'conheceCr',badge:'Sobre ti',title:'Conheces os benefícios da creatina?',type:'choice',opts:[{v:'Sim, conheço bem',icon:'🧠',label:'Sim, conheço bem'},{v:'Tenho uma ideia geral',icon:'💡',label:'Tenho uma ideia geral'},{v:'Não conheço',icon:'❓',label:'Não conheço'}]});
-s.push({id:'barras',badge:'Sobre ti',title:'Costumas consumir barras proteicas ou funcionais?',type:'choice',opts:[{v:'Sim, frequentemente',icon:'🍫',label:'Sim, frequentemente'},{v:'Às vezes',icon:'🔄',label:'Às vezes'},{v:'Raramente / Nunca',icon:'❌',label:'Raramente / Nunca'}]});
-s.push({id:'_transition',type:'transition',icon:'🍫',title:'Vamos à prova!',sub:'Agora vais provar duas barras. Escolhe com qual queres começar e avalia cada uma com calma.'});
-s.push({id:'_choose',badge:'Prova',title:'Com qual queres começar?',sub:'Vais provar as duas. Escolhe a primeira!',type:'chooseFlavor'});
-if(firstFlavor){
-s=s.concat(tasteSteps(firstFlavor,1));
-s.push({id:'_transition2',type:'transition',icon:'🔄',title:'Segunda barra!',sub:'Bebe um golo de água para limpar o palato. Quando estiveres pronto/a, avança.'});
-s=s.concat(tasteSteps(sf(),2));
-}
-s.push({id:'preferida',badge:'Comparação',title:'Qual das duas barras preferes?',type:'compare'});
-s.push({id:'prefMotivo',badge:'Comparação',title:'Porquê essa preferência?',type:'text',ph:'O que te fez preferir essa?',opt:true});
-s.push({id:'ocasiao',badge:'Comparação',title:'Em que ocasião consumirias?',sub:'Podes seleccionar várias opções',type:'multi',opts:[{v:'Pré-treino',icon:'🏋️',label:'Pré-treino'},{v:'Pós-treino',icon:'💪',label:'Pós-treino'},{v:'Snack diário',icon:'☀️',label:'Snack diário'},{v:'Lanche no trabalho',icon:'💼',label:'Lanche no trabalho'},{v:'Substituição de refeição',icon:'🍽️',label:'Substituição de refeição'}]});
+s.push({id:'_w',type:'welcome'});
+// PERFIL
+s.push({id:'exercicio',badge:'Sobre ti',title:'Praticas exercício físico regularmente?',type:'choice',opts:[{v:'Sim',i:'✅',l:'Sim'},{v:'Não',i:'❌',l:'Não'}]});
+if(A.exercicio==='Sim')s.push({id:'tipoExercicio',badge:'Sobre ti',title:'Que tipo de exercício?',sub:'Podes seleccionar várias opções',type:'multi',opts:[{v:'Ginásio',i:'🏋️',l:'Ginásio / Musculação'},{v:'Corrida / Cardio',i:'🏃',l:'Corrida / Cardio'},{v:'Desporto coletivo',i:'⚽',l:'Desporto coletivo'},{v:'Outro',i:'🤸',l:'Outro'}]});
+s.push({id:'suplementos',badge:'Sobre ti',title:'Consomes suplementos alimentares?',type:'choice',opts:[{v:'Sim, regularmente',i:'✅',l:'Sim, regularmente'},{v:'Ocasionalmente',i:'🔄',l:'Ocasionalmente'},{v:'Não',i:'❌',l:'Não'}]});
+s.push({id:'creatina',badge:'Sobre ti',title:'Tomas ou já tomaste creatina?',type:'choice',opts:[{v:'Tomo atualmente',i:'💪',l:'Tomo atualmente'},{v:'Já tomei',i:'🔄',l:'Já tomei'},{v:'Nunca tomei',i:'🤷',l:'Nunca tomei'}]});
+s.push({id:'conheceCr',badge:'Sobre ti',title:'Conheces os benefícios da creatina?',type:'choice',opts:[{v:'Sim, conheço bem',i:'🧠',l:'Sim, conheço bem'},{v:'Tenho uma ideia geral',i:'💡',l:'Tenho uma ideia geral'},{v:'Não conheço',i:'❓',l:'Não conheço'}]});
+s.push({id:'barras',badge:'Sobre ti',title:'Costumas consumir barras proteicas ou funcionais?',type:'choice',opts:[{v:'Sim, frequentemente',i:'🍫',l:'Sim, frequentemente'},{v:'Às vezes',i:'🔄',l:'Às vezes'},{v:'Raramente / Nunca',i:'❌',l:'Raramente / Nunca'}]});
+// TRANSIÇÃO PROVA
+s.push({id:'_t1',type:'trans',icon:'🥥',title:'Vamos à prova!',sub:'Prova a barra Coco & Pepitas de Chocolate Branco. Observa, cheira e só depois prova.'});
+// PROVA
+s.push({id:'aspeto',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Como avalias o aspeto visual da barra?',type:'slider',lo:'Nada apelativo',hi:'Muito apelativo'});
+s.push({id:'aroma',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Como avalias o aroma?',type:'choice',opts:[{v:'Agradável',i:'👃',l:'Agradável'},{v:'Neutro',i:'😐',l:'Neutro'},{v:'Desagradável',i:'🤢',l:'Desagradável'}]});
+s.push({id:'sabor',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Como avalias o sabor geral?',sub:'Agora sim, prova!',type:'slider',lo:'Não gostei',hi:'Adorei'});
+s.push({id:'residual',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Sentes algum sabor residual desagradável?',sub:'Por exemplo: amargo, metálico, arenoso...',type:'choice',opts:[{v:'Sim',i:'😬',l:'Sim'},{v:'Ligeiro',i:'🤔',l:'Ligeiro'},{v:'Não',i:'😊',l:'Não'}]});
+if(A.residual==='Sim'||A.residual==='Ligeiro')s.push({id:'residualDesc',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Descreve o sabor residual:',type:'text',ph:'Ex: amargo, metálico, arenoso...'});
+s.push({id:'docura',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Como avalias a doçura?',type:'choice',opts:[{v:'Pouco doce',i:'🍋',l:'Pouco doce'},{v:'Equilibrado',i:'👌',l:'Equilibrado'},{v:'Demasiado doce',i:'🍯',l:'Demasiado doce'}]});
+s.push({id:'textura',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Como avalias a textura?',type:'choice',opts:[{v:'Demasiado dura',i:'🪨',l:'Demasiado dura'},{v:'Ideal',i:'👌',l:'Ideal'},{v:'Demasiado mole',i:'🫠',l:'Demasiado mole'},{v:'Arenosa',i:'⏳',l:'Arenosa'},{v:'Pegajosa',i:'🍯',l:'Pegajosa'}]});
+s.push({id:'mastigar',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'É fácil de mastigar?',type:'slider',lo:'Muito difícil',hi:'Muito fácil'});
+s.push({id:'compraria',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Comprarias esta barra?',type:'choice',opts:[{v:'Sim, com certeza',i:'🤩',l:'Sim, com certeza'},{v:'Provavelmente sim',i:'🙂',l:'Provavelmente sim'},{v:'Talvez',i:'🤔',l:'Talvez'},{v:'Provavelmente não',i:'😕',l:'Provavelmente não'},{v:'Não',i:'❌',l:'Não'}]});
+s.push({id:'sugestoes',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Sugestões de melhoria?',sub:'Opcional — diz-nos o que mudarias.',type:'text',ph:'O que mudarias nesta barra?',opt:true});
+s.push({id:'ocasiao',badge:'🥥 Prova — Coco & Pepitas Choc. Branco',title:'Em que ocasião consumirias?',sub:'Podes seleccionar várias opções',type:'multi',opts:[{v:'Pré-treino',i:'🏋️',l:'Pré-treino'},{v:'Pós-treino',i:'💪',l:'Pós-treino'},{v:'Snack diário',i:'☀️',l:'Snack diário'},{v:'Lanche no trabalho',i:'💼',l:'Lanche no trabalho'},{v:'Substituição de refeição',i:'🍽️',l:'Substituição de refeição'}]});
+// REVELAÇÃO
 s.push({id:'_info',type:'info'});
-s.push({id:'expectativa',badge:'Opinião final',title:'A informação nutricional corresponde ao que esperavas?',type:'choice',opts:[{v:'Sim, como esperava',icon:'👌',label:'Sim, como esperava'},{v:'Melhor do que esperava',icon:'🤩',label:'Melhor do que esperava'},{v:'Pior do que esperava',icon:'😕',label:'Pior do que esperava'}]});
+// PÓS-REVELAÇÃO
+s.push({id:'expectativa',badge:'Opinião final',title:'A informação nutricional corresponde ao que esperavas?',type:'choice',opts:[{v:'Sim, como esperava',i:'👌',l:'Sim, como esperava'},{v:'Melhor do que esperava',i:'🤩',l:'Melhor do que esperava'},{v:'Pior do que esperava',i:'😕',l:'Pior do que esperava'}]});
 s.push({id:'surpresaPos',badge:'Opinião final',title:'Algo te surpreendeu positivamente?',type:'text',ph:'Ex: a quantidade de proteína, os ingredientes naturais...',opt:true});
 s.push({id:'surpresaNeg',badge:'Opinião final',title:'E negativamente?',type:'text',ph:'Ex: o teor de açúcar, um ingrediente específico...',opt:true});
-s.push({id:'intencaoPos',badge:'Opinião final',title:'Sabendo a composição, a tua intenção de compra muda?',type:'choice',opts:[{v:'Aumenta muito',icon:'🚀',label:'Aumenta muito'},{v:'Aumenta',icon:'📈',label:'Aumenta'},{v:'Mantém-se',icon:'➡️',label:'Mantém-se'},{v:'Diminui',icon:'📉',label:'Diminui'}]});
+s.push({id:'intencaoPos',badge:'Opinião final',title:'Sabendo a composição, a tua intenção de compra muda?',type:'choice',opts:[{v:'Aumenta muito',i:'🚀',l:'Aumenta muito'},{v:'Aumenta',i:'📈',l:'Aumenta'},{v:'Mantém-se',i:'➡️',l:'Mantém-se'},{v:'Diminui',i:'📉',l:'Diminui'}]});
 s.push({id:'praticidade',badge:'Opinião final',title:'Uma barra com 3g de creatina é uma forma prática de suplementação?',type:'slider',lo:'Nada prática',hi:'Muito prática'});
-s.push({id:'preco',badge:'Opinião final',title:'Que preço considerarias justo por barra (35g)?',type:'choice',opts:[{v:'< 2€',icon:'💰',label:'Menos de 2€'},{v:'2€ - 2,50€',icon:'💰',label:'2€ — 2,50€'},{v:'2,50€ - 3€',icon:'💰',label:'2,50€ — 3€'},{v:'3€ - 3,50€',icon:'💰',label:'3€ — 3,50€'},{v:'> 3,50€',icon:'💰',label:'Mais de 3,50€'}]});
-s.push({id:'confianca',badge:'Opinião final',title:'A lista de ingredientes transmite-te confiança?',type:'choice',opts:[{v:'Sim',icon:'✅',label:'Sim'},{v:'Parcialmente',icon:'🤔',label:'Parcialmente'},{v:'Não',icon:'❌',label:'Não'}]});
+s.push({id:'preco',badge:'Opinião final',title:'Que preço considerarias justo por barra (35g)?',type:'choice',opts:[{v:'< 2€',i:'💰',l:'Menos de 2€'},{v:'2€ - 2,50€',i:'💰',l:'2€ — 2,50€'},{v:'2,50€ - 3€',i:'💰',l:'2,50€ — 3€'},{v:'3€ - 3,50€',i:'💰',l:'3€ — 3,50€'},{v:'> 3,50€',i:'💰',l:'Mais de 3,50€'}]});
+s.push({id:'confianca',badge:'Opinião final',title:'A lista de ingredientes transmite-te confiança?',type:'choice',opts:[{v:'Sim',i:'✅',l:'Sim'},{v:'Parcialmente',i:'🤔',l:'Parcialmente'},{v:'Não',i:'❌',l:'Não'}]});
 s.push({id:'comentarioFinal',badge:'Opinião final',title:'Tens algum comentário final?',type:'text',ph:'Algo que queiras partilhar connosco...',opt:true});
 s.push({id:'_thanks',type:'thanks'});
 return s;
 }
 
-function renderNutritionTable(fid){
-var f=FLAVORS[fid];
-var h='<table class="nt"><tr><th>POR 100g</th><th>VALOR</th></tr>';
-f.nutrition.forEach(function(r){
-var isSub=r[0].indexOf('&nbsp;')===0;
-h+='<tr'+(isSub?' class="sub"':'')+'><td>'+r[0]+'</td><td>'+r[1]+'</td></tr>';
-});
-h+='</table>';
-h+='<div class="ingredients-box"><strong>Ingredientes:</strong> '+f.ingredients;
-h+='<div class="allergen-row">';
-f.allergens.forEach(function(a){h+='<span class="allergen-tag">⚠️ '+a+'</span>';});
-f.traces.forEach(function(a){h+='<span class="allergen-tag">📌 Vestígios: '+a+'</span>';});
-h+='</div></div>';
-return h;
+function renderNT(){
+var h='<table class="nt"><tr><th>POR BARRA (35g)</th><th>VALOR</th></tr>';
+NUTRITION.forEach(function(r){var isSub=r[0].indexOf('&nbsp;')===0;h+='<tr'+(isSub?' class="sub"':'')+'><td>'+r[0]+'</td><td>'+r[1]+'</td></tr>';});
+h+='</table><div class="ib"><strong>Ingredientes:</strong> '+INGREDIENTS+'<div class="ar">';
+ALLERGENS.forEach(function(a){h+='<span class="at">⚠️ '+a+'</span>';});
+TRACES.forEach(function(a){h+='<span class="at">📌 Vestígios: '+a+'</span>';});
+h+='</div></div>';return h;
 }
 
-function render(){
-var steps=buildSteps();
-if(currentStep>=steps.length)currentStep=steps.length-1;
-var step=steps[currentStep];
-var total=steps.length;
-var container=document.getElementById('screenContainer');
-var progC=document.getElementById('progressContainer');
-var showProg=step.type!=='welcome'&&step.type!=='transition'&&step.type!=='thanks';
-progC.style.display=showProg?'block':'none';
-if(showProg){
-var countable=0;for(var i=0;i<total;i++){if(steps[i].type!=='welcome'&&steps[i].type!=='transition'&&steps[i].type!=='thanks')countable++;}
-var cur=0;for(var i=0;i<=currentStep;i++){if(steps[i].type!=='welcome'&&steps[i].type!=='transition'&&steps[i].type!=='thanks')cur++;}
-document.getElementById('progressFill').style.width=((cur/countable)*100)+'%';
-document.getElementById('progressText').textContent='Pergunta '+cur+' de '+countable;
-}
+function R(){
+var steps=bS();if(CS>=steps.length)CS=steps.length-1;
+var step=steps[CS],c=document.getElementById('sc'),pg=document.getElementById('progC');
+var showP=step.type!=='welcome'&&step.type!=='trans'&&step.type!=='thanks';
+pg.style.display=showP?'block':'none';
+if(showP){var cnt=0,cur=0;for(var i=0;i<steps.length;i++){if(steps[i].type!=='welcome'&&steps[i].type!=='trans'&&steps[i].type!=='thanks')cnt++;if(i<=CS&&steps[i].type!=='welcome'&&steps[i].type!=='trans'&&steps[i].type!=='thanks')cur++;}document.getElementById('progFill').style.width=((cur/cnt)*100)+'%';document.getElementById('progText').textContent='Pergunta '+cur+' de '+cnt;}
 var h='<div class="screen active">';
-
 if(step.type==='welcome'){
-h+='<div class="welcome-icon">🍫</div>';
-h+='<h1 class="welcome-title">Prova as nossas novas barras Creatina Balance</h1>';
-h+='<p class="welcome-description">Ajuda-nos a criar o produto perfeito. Vais provar dois sabores e dizer-nos o que achas — demora cerca de 5 minutos.</p>';
-h+='<p class="welcome-cta">A tua opinião é essencial para desenvolvermos produtos que fazem sentido.</p>';
-h+='<div class="welcome-badges"><span class="badge">⏱️ 5 minutos</span><span class="badge">🍫 2 sabores</span><span class="badge highlight">📊 A tua opinião conta</span></div>';
-h+='<button class="btn btn-primary" onclick="goNext()">Começar →</button>';
-h+='</div>';container.innerHTML=h;return;
+h+='<div class="wi"></div>';
+h+='<h1 class="wt">Avaliação Sensorial<br><span style="font-size:.75em;font-weight:500;opacity:.7">Barra Balance com Creatina</span></h1>';
+h+='<p class="wd">Estamos a desenvolver uma nova barra funcional e a tua avaliação é fundamental. Prova e responde com honestidade — demora cerca de 3 minutos.</p>';
+h+='<p class="wc">Sabor: <strong>Coco & Pepitas de Chocolate Branco</strong></p>';
+h+='<div class="wb"><span class="badge">⏱️ 3 minutos</span><span class="badge">🥥 Coco & Pepitas Choc. Branco</span><span class="badge hl">📊 Avaliação 1/2</span></div>';
+h+='<button class="btn bp" onclick="goN()">Começar →</button></div>';
+c.innerHTML=h;return;
 }
-
-if(step.type==='transition'){
-h+='<div class="transition-screen"><div class="transition-icon">'+step.icon+'</div>';
-h+='<h2 class="transition-title">'+step.title+'</h2>';
-h+='<p class="transition-subtitle">'+step.sub+'</p>';
-h+='<button class="btn btn-primary" onclick="goNext()">Continuar →</button></div></div>';
-container.innerHTML=h;return;
+if(step.type==='trans'){
+h+='<div class="ts"><div class="tsi">'+step.icon+'</div><h2 class="tst">'+step.title+'</h2><p class="tss">'+step.sub+'</p>';
+h+='<button class="btn bp" onclick="goN()">Continuar →</button></div></div>';c.innerHTML=h;return;
 }
-
 if(step.type==='thanks'){
-h+='<div class="transition-screen"><div class="transition-icon" id="thanksIcon">⏳</div>';
-h+='<h2 class="transition-title" id="thanksTitle">A enviar...</h2>';
-h+='<p class="transition-subtitle" id="thanksSub">Aguarda um momento.</p>';
-h+='<p class="gdpr-note">🔒 As tuas respostas são anónimas e utilizadas apenas para desenvolvimento de produto.</p>';
-h+='</div></div>';
-container.innerHTML=h;
-submitToBasin();
-return;
+h+='<div class="ts"><div class="tsi" id="thanksIcon">⏳</div><h2 class="tst" id="thanksTitle">A enviar...</h2>';
+h+='<p class="tss" id="thanksSub">Aguarda um momento.</p>';
+h+='<div id="thanksBonus" style="display:none"><div style="background:var(--berry);border-radius:var(--r);padding:28px;text-align:center;margin-top:28px;color:var(--eggshell)"><div style="font-size:13px;font-weight:600;text-transform:uppercase;color:var(--begonia);margin-bottom:10px">O nosso agradecimento</div><div style="font-size:36px;font-weight:800;letter-spacing:3px;margin-bottom:12px">BALANCE30</div><div style="font-size:14px;opacity:.8;margin-bottom:20px">30% de desconto em corialfoods.com</div><button class="btn" style="background:transparent;border:2px solid var(--eggshell);color:var(--eggshell);width:auto;padding:12px 28px;font-size:14px" onclick="navigator.clipboard.writeText(\'BALANCE30\');this.textContent=\'Copiado! ✓\'">Copiar código</button></div></div>';
+h+='<p class="gdpr">🔒 As tuas respostas são anónimas e utilizadas apenas para desenvolvimento de produto.</p></div></div>';
+c.innerHTML=h;submitToBasin();return;
 }
-
-if(step.badge)h+='<div style="margin-bottom:24px"><span class="badge">'+step.badge+'</span></div>';
-h+='<h2 class="question-title">'+step.title+'</h2>';
-if(step.sub)h+='<p class="question-subtitle">'+step.sub+'</p>';
-
-if(step.type==='choice'){
-h+='<div class="choices-container">';
-step.opts.forEach(function(o){
-var sel=answers[step.id]===o.v?' selected':'';
-h+='<div class="choice-option'+sel+'" onclick="selectSingle(\''+step.id+'\',\''+o.v.replace(/'/g,"\\'")+'\')">';
-h+='<span class="choice-icon">'+o.icon+'</span>';
-h+='<div class="choice-content"><div class="choice-label">'+o.label+'</div>'+(o.desc?'<div class="choice-description">'+o.desc+'</div>':'')+'</div>';
-h+='<div class="choice-check"></div></div>';
-});
-h+='</div>';
-}
-
-if(step.type==='multi'){
-h+='<div class="choices-container">';
-var arr=answers[step.id]||[];
-step.opts.forEach(function(o){
-var sel=arr.indexOf(o.v)>-1?' selected':'';
-h+='<div class="choice-option multiple'+sel+'" onclick="toggleMulti(\''+step.id+'\',\''+o.v.replace(/'/g,"\\'")+'\')">';
-h+='<span class="choice-icon">'+o.icon+'</span>';
-h+='<div class="choice-content"><div class="choice-label">'+o.label+'</div></div>';
-h+='<div class="choice-check"></div></div>';
-});
-h+='</div>';
-}
-
-if(step.type==='slider'){
-var val=answers[step.id]||3;
-var emojis=['','😫','😕','😐','🙂','😄'];
-h+='<div class="slider-container">';
-h+='<div class="slider-labels"><span class="slider-label">'+step.lo+'</span><span class="slider-label">'+step.hi+'</span></div>';
-h+='<input type="range" id="sliderInput" min="1" max="5" value="'+val+'" oninput="updateSlider(\''+step.id+'\')">';
-h+='<div class="slider-scale">';
-for(var i=1;i<=5;i++){h+='<span class="scale-point'+(i===val?' active':'')+'" onclick="setSlider(\''+step.id+'\','+i+')">'+i+'</span>';}
-h+='</div>';
-h+='<div class="emoji-feedback" id="emojiF">'+emojis[val]+'</div>';
-h+='</div>';
-}
-
-if(step.type==='text'){
-var val=answers[step.id]||'';
-h+='<textarea class="text-input" id="textInput" placeholder="'+(step.ph||'')+'" oninput="answers[\''+step.id+'\']=this.value">'+val+'</textarea>';
-}
-
-if(step.type==='chooseFlavor'){
-h+='<div class="flavor-card'+(firstFlavor==='coco'?' selected':'')+'" onclick="chooseFlavor(\'coco\')">';
-h+='<div class="flavor-icon">🥥</div>';
-h+='<div class="choice-content"><div class="choice-label">Coco & Chocolate Branco</div><div class="choice-description">Tropical e suave</div></div></div>';
-h+='<div class="flavor-card'+(firstFlavor==='frutos'?' selected':'')+'" onclick="chooseFlavor(\'frutos\')">';
-h+='<div class="flavor-icon">🍫</div>';
-h+='<div class="choice-content"><div class="choice-label">Frutos Vermelhos & Chocolate Negro</div><div class="choice-description">Intenso e frutado</div></div></div>';
-}
-
-if(step.type==='compare'){
-h+='<div class="comparison-row">';
-if(firstFlavor){
-[firstFlavor,sf()].forEach(function(fid){
-var f=FLAVORS[fid];
-var sel=answers.preferida===fid?' selected':'';
-h+='<div class="comparison-card'+sel+'" onclick="selectSingle(\'preferida\',\''+fid+'\')">';
-h+='<div class="comparison-emoji">'+f.emoji+'</div>';
-h+='<div class="comparison-label">'+f.short+'</div></div>';
-});
-}
-h+='</div>';
-var sel3=answers.preferida==='ambas'?' selected':'';
-h+='<div class="choice-option'+sel3+'" onclick="selectSingle(\'preferida\',\'ambas\')" style="margin-bottom:24px">';
-h+='<span class="choice-icon">🤝</span><div class="choice-content"><div class="choice-label">Gostei das duas por igual</div></div><div class="choice-check"></div></div>';
-}
-
 if(step.type==='info'){
 h+='<div style="margin-bottom:24px"><span class="badge">Revelação</span></div>';
-h+='<h2 class="question-title">O que há dentro destas barras?</h2>';
-h+='<p class="question-subtitle">Cada barra de 35g contém 3g de creatina monohidratada.</p>';
-h+='<div class="creatine-box"><h3>⚡ Creatina — 3g por barra</h3>';
+h+='<h2 class="qtitle">O que há dentro desta barra?</h2>';
+h+='<p class="qsub">Cada barra de 35g contém 3g de creatina monohidratada.</p>';
+h+='<div class="crbox"><h3>⚡ Creatina — 3g por barra</h3>';
 h+='<p>Dose diária cientificamente validada para resultados reais.</p>';
-h+='<ul class="creatine-list">';
-h+='<li>Aumenta a força e performance muscular</li>';
-h+='<li>Melhora a recuperação pós-treino</li>';
-h+='<li>Benefícios cognitivos: memória e foco</li>';
-h+='<li>Aprovada pelo Comité Olímpico Internacional</li>';
-h+='</ul>';
-h+='<p class="science-ref" style="opacity:.5;margin-top:12px;font-size:11px">Harvard Health 2024 · PMC Systematic Review 2021 · Frontiers in Nutrition 2024</p>';
+h+='<ul class="crlist"><li>Aumenta a força e performance muscular</li><li>Melhora a recuperação pós-treino</li><li>Benefícios cognitivos: memória e foco</li><li>Aprovada pelo Comité Olímpico Internacional</li></ul>';
+h+='<div style="margin-top:16px;padding:12px 16px;background:rgba(254,249,227,.12);border-radius:8px"><p style="font-size:12px;opacity:.7;margin:0;line-height:1.5">📚 Referências científicas:<br>Harvard Health (2024) · PMC Systematic Review (2021) · Frontiers in Nutrition (2024)</p></div></div>';
+h+='<div class="ic"><strong style="font-size:15px">🥥 Coco & Pepitas de Chocolate Branco — Informação Nutricional</strong>'+renderNT()+'</div>';
+h+='<div class="nb"><button class="btn bb" onclick="goB()">←</button><button class="btn bp" onclick="goN()">Seguinte →</button></div></div>';
+c.innerHTML=h;window.scrollTo(0,0);return;
+}
+if(step.badge)h+='<div style="margin-bottom:24px"><span class="badge">'+step.badge+'</span></div>';
+h+='<h2 class="qtitle">'+step.title+'</h2>';
+if(step.sub)h+='<p class="qsub">'+step.sub+'</p>';
+if(step.type==='choice'){h+='<div class="cc">';step.opts.forEach(function(o){var sel=A[step.id]===o.v?' sel':'';h+='<div class="co'+sel+'" onclick="selS(\''+step.id+"','"+o.v.replace(/'/g,"\\'")+"')\">"+'<span class="ci">'+o.i+'</span><div class="cl"><div class="cll">'+o.l+'</div>'+(o.d?'<div class="cld">'+o.d+'</div>':'')+'</div><div class="ck"></div></div>';});h+='</div>';}
+if(step.type==='multi'){h+='<div class="cc">';var arr=A[step.id]||[];step.opts.forEach(function(o){var sel=arr.indexOf(o.v)>-1?' sel':'';h+='<div class="co multi'+sel+'" onclick="togM(\''+step.id+"','"+o.v.replace(/'/g,"\\'")+"')\">"+'<span class="ci">'+o.i+'</span><div class="cl"><div class="cll">'+o.l+'</div></div><div class="ck"></div></div>';});h+='</div>';}
+if(step.type==='slider'){var val=A[step.id]||3;var em=['','😫','😕','😐','🙂','😄'];h+='<div class="sc"><div class="sl"><span class="sll">'+step.lo+'</span><span class="sll">'+step.hi+'</span></div><input type="range" id="si" min="1" max="5" value="'+val+'" oninput="uS(\''+step.id+'\')"><div class="ss">';for(var i=1;i<=5;i++)h+='<span class="sp'+(i===val?' active':'')+'" onclick="sS(\''+step.id+'\','+i+')">'+i+'</span>';h+='</div><div class="ef" id="ef">'+em[val]+'</div></div>';}
+if(step.type==='text'){var val=A[step.id]||'';h+='<textarea class="ti" id="ti" placeholder="'+(step.ph||'')+'" oninput="A[\''+step.id+'\']=this.value">'+val+'</textarea>';}
+var isFirst=CS<=1;
+var needsBtn=step.type==='text'||step.type==='multi'||step.type==='slider';
+var hasA=!!A[step.id];if(step.type==='multi')hasA=(A[step.id]||[]).length>0;if(step.type==='slider')hasA=true;
+h+='<div class="nb">';if(!isFirst)h+='<button class="btn bb" onclick="goB()">←</button>';
+if(needsBtn){var dis=!hasA&&!step.opt?' disabled':'';h+='<button class="btn bp" id="nb"'+dis+' onclick="goN()">Seguinte →</button>';}
 h+='</div>';
-h+='<div class="tabs"><button class="tab-btn'+(infoTab==='coco'?' active':'')+'" onclick="switchInfoTab(\'coco\')">🥥 Coco & Choc. Branco</button><button class="tab-btn'+(infoTab==='frutos'?' active':'')+'" onclick="switchInfoTab(\'frutos\')">🍫 Frutos Verm. & Choc. Negro</button></div>';
-h+='<div class="info-card" id="nutritionCard">'+renderNutritionTable(infoTab)+'</div>';
+if(step.opt)h+='<button class="skip" onclick="goN()">Saltar →</button>';
+h+='</div>';c.innerHTML=h;window.scrollTo(0,0);
 }
 
-// Nav buttons
-var needsNav=step.type!=='welcome'&&step.type!=='transition'&&step.type!=='thanks';
-if(needsNav){
-var isFirst=currentStep===1;
-var needsNext=step.type==='text'||step.type==='multi'||step.type==='info'||step.type==='slider';
-var hasAnswer=!!answers[step.id];
-if(step.type==='multi')hasAnswer=(answers[step.id]||[]).length>0;
-if(step.type==='slider')hasAnswer=true;
-if(step.type==='info')hasAnswer=true;
-if(step.type==='chooseFlavor')hasAnswer=!!firstFlavor;
-
-h+='<div class="nav-buttons">';
-if(!isFirst)h+='<button class="btn btn-back" onclick="goBack()">←</button>';
-if(needsNext){
-var dis=!hasAnswer&&!step.opt?' disabled':'';
-h+='<button class="btn btn-primary" id="nextBtn"'+dis+' onclick="goNext()">Seguinte →</button>';
-} else if(step.type==='chooseFlavor'){
-h+='<button class="btn btn-primary"'+(firstFlavor?'':' disabled')+' onclick="goNext()">Seguinte →</button>';
-}
-h+='</div>';
-
-if(step.opt){
-h+='<button class="skip-link" onclick="goNext()">Saltar →</button>';
-}
-}
-
-h+='</div>';
-container.innerHTML=h;
-window.scrollTo(0,0);
-}
-
-function selectSingle(id,v){
-answers[id]=v;
-var steps=buildSteps();
-var step=steps[currentStep];
-if(step&&step.type!=='compare'){
-setTimeout(function(){goNext();},250);
-} else {
-render();
-}
-}
-
-function toggleMulti(id,v){
-if(!answers[id])answers[id]=[];
-var idx=answers[id].indexOf(v);
-if(idx>-1)answers[id].splice(idx,1);
-else answers[id].push(v);
-render();
-}
-
-function updateSlider(id){
-var s=document.getElementById('sliderInput');
-var v=parseInt(s.value);
-answers[id]=v;
-var emojis=['','😫','😕','😐','🙂','😄'];
-document.getElementById('emojiF').textContent=emojis[v];
-document.querySelectorAll('.scale-point').forEach(function(p){
-p.classList.toggle('active',parseInt(p.textContent)===v);
-});
-}
-
-function setSlider(id,v){
-answers[id]=v;
-document.getElementById('sliderInput').value=v;
-updateSlider(id);
-}
-
-function chooseFlavor(fid){
-firstFlavor=fid;
-render();
-}
-
-function switchInfoTab(t){
-infoTab=t;
-document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
-event.target.classList.add('active');
-document.getElementById('nutritionCard').innerHTML=renderNutritionTable(t);
-}
-
-function goNext(){
-var steps=buildSteps();
-// Save text input
-var ti=document.getElementById('textInput');
-if(ti){var step=steps[currentStep];if(step)answers[step.id]=ti.value;}
-// Save slider
-var si=document.getElementById('sliderInput');
-if(si){var step=steps[currentStep];if(step)answers[step.id]=parseInt(si.value);}
-
-currentStep++;
-var newSteps=buildSteps();
-if(currentStep>=newSteps.length)currentStep=newSteps.length-1;
-render();
-}
-
-function goBack(){
-if(currentStep>0){
-currentStep--;
-var steps=buildSteps();
-if(currentStep>=steps.length)currentStep=steps.length-1;
-render();
-}
-}
-
-var basinSent=false;
+function selS(id,v){A[id]=v;setTimeout(goN,250);}
+function togM(id,v){if(!A[id])A[id]=[];var x=A[id].indexOf(v);if(x>-1)A[id].splice(x,1);else A[id].push(v);R();}
+function uS(id){var s=document.getElementById('si'),v=parseInt(s.value);A[id]=v;var em=['','😫','😕','😐','🙂','😄'];document.getElementById('ef').textContent=em[v];document.querySelectorAll('.sp').forEach(function(p){p.classList.toggle('active',parseInt(p.textContent)===v);});}
+function sS(id,v){A[id]=v;document.getElementById('si').value=v;uS(id);}
+function goN(){var s=bS(),st=s[CS];if(st){var ti=document.getElementById('ti');if(ti)A[st.id]=ti.value;var si=document.getElementById('si');if(si&&st.type==='slider')A[st.id]=parseInt(si.value);}CS++;var ns=bS();if(CS>=ns.length)CS=ns.length-1;R();}
+function goB(){if(CS>0){CS--;var s=bS();if(CS>=s.length)CS=s.length-1;R();}}
 function submitToBasin(){
-if(basinSent)return;
-basinSent=true;
+if(basinSent)return;basinSent=true;
 var data={
 timestamp:new Date().toISOString(),
-exercicio:answers.exercicio||'',
-tipo_exercicio:(answers.tipoExercicio||[]).join(', '),
-suplementos:answers.suplementos||'',
-creatina:answers.creatina||'',
-conhece_creatina:answers.conheceCr||'',
-barras_proteicas:answers.barras||''
+barra:'Coco & Pepitas de Chocolate Branco',
+exercicio:A.exercicio||'',
+tipo_exercicio:(A.tipoExercicio||[]).join(', '),
+suplementos:A.suplementos||'',
+creatina:A.creatina||'',
+conhece_creatina:A.conheceCr||'',
+barras_proteicas:A.barras||'',
+aspeto:A.aspeto||'',
+aroma:A.aroma||'',
+sabor:A.sabor||'',
+residual:A.residual||'',
+residual_desc:A.residualDesc||'',
+docura:A.docura||'',
+textura:A.textura||'',
+mastigar:A.mastigar||'',
+compraria:A.compraria||'',
+sugestoes:A.sugestoes||'',
+ocasiao:(A.ocasiao||[]).join(', '),
+expectativa:A.expectativa||'',
+surpresa_positiva:A.surpresaPos||'',
+surpresa_negativa:A.surpresaNeg||'',
+intencao_pos_info:A.intencaoPos||'',
+praticidade:A.praticidade||'',
+preco_justo:A.preco||'',
+confianca_ingredientes:A.confianca||'',
+comentario_final:A.comentarioFinal||''
 };
-['coco','frutos'].forEach(function(fid){
-var pre=fid+'_';
-data[pre+'aspeto']=answers[fid+'_aspeto']||'';
-data[pre+'aroma']=answers[fid+'_aroma']||'';
-data[pre+'sabor']=answers[fid+'_sabor']||'';
-data[pre+'residual']=answers[fid+'_residual']||'';
-data[pre+'residual_desc']=answers[fid+'_residualDesc']||'';
-data[pre+'docura']=answers[fid+'_docura']||'';
-data[pre+'textura']=answers[fid+'_textura']||'';
-data[pre+'mastigar']=answers[fid+'_mastigar']||'';
-data[pre+'compraria']=answers[fid+'_compraria']||'';
-data[pre+'sugestoes']=answers[fid+'_sugestoes']||'';
-});
-data.primeira_barra=firstFlavor||'';
-data.preferida=answers.preferida||'';
-data.pref_motivo=answers.prefMotivo||'';
-data.ocasiao=(answers.ocasiao||[]).join(', ');
-data.expectativa=answers.expectativa||'';
-data.surpresa_positiva=answers.surpresaPos||'';
-data.surpresa_negativa=answers.surpresaNeg||'';
-data.intencao_pos_info=answers.intencaoPos||'';
-data.praticidade=answers.praticidade||'';
-data.preco_justo=answers.preco||'';
-data.confianca_ingredientes=answers.confianca||'';
-data.comentario_final=answers.comentarioFinal||'';
 console.log('📤 Basin:',data);
 fetch(BASIN_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
 .then(function(r){console.log(r.ok?'✅ OK':'❌ Erro:'+r.status);showThanks(r.ok);})
@@ -508,10 +258,10 @@ fetch(BASIN_URL,{method:'POST',headers:{'Content-Type':'application/json','Accep
 function showThanks(ok){
 document.getElementById('thanksIcon').textContent='✅';
 document.getElementById('thanksTitle').textContent='Obrigado!';
-document.getElementById('thanksSub').innerHTML='A tua opinião é essencial para criarmos produtos que fazem sentido.<br><br>— Guilherme & Sara, CORIAL'+(ok?'':'<br><br><small style="opacity:.5">⚠️ Erro ao enviar — respostas registadas localmente.</small>');
+document.getElementById('thanksSub').innerHTML='Completaste a avaliação da barra Coco & Pepitas de Chocolate Branco.<br><br>Obrigado pela tua participação!'+(ok?'':'<br><br><small style="opacity:.5">⚠️ Erro ao enviar — respostas registadas localmente.</small>');
+document.getElementById('thanksBonus').style.display='block';
 }
-
-render();
+R();
 </script>
 </body>
 </html>
